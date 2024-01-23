@@ -11,8 +11,8 @@ void bubble_sort(int *array, size_t size)
 	size_t a, b;
 	bool swappd;
 
-	if (array == NULL && size == 0)
-		print_array(array, size);
+	if (array == NULL || size == 0)
+		return;
 	a = 0;
 	while (a < size - 1)
 	{
@@ -22,6 +22,7 @@ void bubble_sort(int *array, size_t size)
 			if (array[b] > array[b + 1])
 			{
 				swap_ele(&array[b], &array[b + 1]);
+				print_array(array, size);
 				swappd = true;
 			}
 		}
@@ -43,4 +44,5 @@ void swap_ele(size_t *e1, size_t *e2)
 	temp = e1;
 	e1 = e2;
 	e2 = temp;
+
 }
