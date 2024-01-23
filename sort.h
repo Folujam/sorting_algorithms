@@ -24,5 +24,6 @@ void print_array(const int *array, size_t size);
 
 void print_list(const listint_t *list);
 void bubble_sort(int *array, size_t size);
+void swap_ele(size_t *e1, size_t *e2);
 
 #endif
